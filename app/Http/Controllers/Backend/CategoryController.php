@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Category;
+use App\Models\SubCategory;
 use Intervention\Image\ImageManager;
 use Intervention\Image\Drivers\Imagick\Driver;
 
@@ -106,6 +107,19 @@ class CategoryController extends Controller
 
     public function DeleteCategory($id){
 
+
+    }
+
+
+    // Sub Category
+    public function AllSubCategory(){
+        $dataSubCategory = SubCategory::latest()->get();
+        return view('admin.backend.subcategory.all_subcategory', compact('dataSubCategory'));
+    } //End Method
+
+    public function AddSubCategory(){
+        $dataCategory = Category::latest()->get();
+        return view('admin.backend.subcategory.add_subcategory', compact('dataCategory'));
     }
 
 
