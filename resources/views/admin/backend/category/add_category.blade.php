@@ -5,11 +5,11 @@
 
 <div class="page-content">
     <!--breadcrumb-->
-    <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+    <div class="mb-3 page-breadcrumb d-none d-sm-flex align-items-center">
         <div class="breadcrumb-title pe-3">Forms</div>
         <div class="ps-3">
             <nav aria-label="breadcrumb">
-                <ol class="breadcrumb mb-0 p-0">
+                <ol class="p-0 mb-0 breadcrumb">
                     <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
                     </li>
                     <li class="breadcrumb-item active" aria-current="page">Form Layouts</li>
@@ -31,12 +31,13 @@
     </div>
     <!--end breadcrumb-->
     <div class="row">
-        <div class="col-xl-12 mx-auto">
-            
+        <div class="mx-auto col-xl-12">
+
             <div class="card">
-                <div class="card-body p-4">
+                <div class="p-4 card-body">
                     {{-- <h5 class="mb-4">Vertical Form</h5> --}}
-                    <form id="myForm" method="post" action="{{route('store.category')}}" class="row g-3">
+                    <form id="myForm" method="post" action="{{route('store.category')}}" class="row g-3" enctype="multipart/form-data">
+                        @csrf
                         <div class="form-group col-md-12">
                             <label for="input1" class="form-label">Category Name</label>
                             <input type="text" name="category_name" class="form-control" id="input1" placeholder="Category Name">
@@ -46,15 +47,15 @@
                             <input type="file" class="form-control" name="image" id="image" />
                         </div>
                         <div class="col-md-12">
-                            <img id ="showImage"src="{{ url('upload/no_image.jpg')}}" alt="Admin" class="rounded-circle p-1 bg-primary" width="80">
+                            <img id ="showImage"src="{{ url('upload/no_image.jpg')}}" alt="Admin" class="p-1 rounded-circle bg-primary" width="80">
                         </div>
-                        
-                       
-                        
+
+
+
                         <div class="col-md-12">
-                            <div class="d-md-flex d-grid align-items-center gap-3">
-                                <button type="submit" class="btn btn-primary px-4">Submit</button>
-                                <button type="button" class="btn btn-light px-4">Reset</button>
+                            <div class="gap-3 d-md-flex d-grid align-items-center">
+                                <button type="submit" class="px-4 btn btn-primary">Simpan</button>
+                                <button type="button" class="px-4 btn btn-light">Reset</button>
                             </div>
                         </div>
                     </form>
@@ -70,25 +71,25 @@
             rules: {
                 category_name: {
                     required : true,
-                }, 
+                },
 
                 image: {
                     required : true,
-                }, 
-                
+                },
+
             },
             messages :{
                 category_name: {
                     required : 'Please Enter category_name',
-                }, 
+                },
 
                 image: {
                     required : 'Please Upload Image',
-                }, 
-                 
+                },
+
 
             },
-            errorElement : 'span', 
+            errorElement : 'span',
             errorPlacement: function (error,element) {
                 error.addClass('invalid-feedback');
                 element.closest('.form-group').append(error);
@@ -101,7 +102,7 @@
             },
         });
     });
-    
+
 </script>
 
 <script type="text/javascript">

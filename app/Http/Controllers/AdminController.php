@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 
 class AdminController extends Controller
@@ -80,7 +80,7 @@ class AdminController extends Controller
             );
             return back()->with($notification);
         }
-        User::whereId(auth()->user()->id)->update([
+        User::whereId(auth()->user->id)->update([
             'password' => Hash::make($request->new_password)
 
         ]);
