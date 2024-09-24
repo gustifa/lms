@@ -124,7 +124,9 @@ class CategoryController extends Controller
 
     public function EditSubCategory($id){
         $category = Category::find($id);
-        return view('admin.backend.subcategory.edit_subcategory', compact('category'));
+        $dataSubCategory = SubCategory::find($id);
+        // dd($dataSubCategory);
+        return view('admin.backend.subcategory.edit_subcategory', compact('category','dataSubCategory'));
 
     }
 

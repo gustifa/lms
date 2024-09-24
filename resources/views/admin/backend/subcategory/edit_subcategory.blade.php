@@ -45,14 +45,9 @@
                             <input type="text" name="category_name" class="form-control" id="input1" value="{{$category->category_name}}">
                         </div>
                         <div class="form-group col-md-12">
-                            <label for="input3" class="form-label">Category Image</label>
-                            <input type="file" class="form-control" name="image" id="image"  />
+                            <label for="input1" class="form-label">Sub Category Name</label>
+                            <input type="text" name="subcategory_name" class="form-control" id="input1" value="{{$dataSubCategory->subcategory_name}}">
                         </div>
-                        <div class="col-md-12">
-                            <img id ="showImage"src="{{ asset($category->image)}}" alt="Admin" class="p-1 rounded-circle bg-primary" width="80">
-                        </div>
-
-
 
                         <div class="col-md-12">
                             <div class="gap-3 d-md-flex d-grid align-items-center">
