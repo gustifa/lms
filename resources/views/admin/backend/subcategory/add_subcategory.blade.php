@@ -43,11 +43,8 @@
                             <input type="text" name="category_name" class="form-control" id="input1" placeholder="Category Name">
                         </div>
                         <div class="form-group col-md-12">
-                            <label for="input3" class="form-label">Category Image</label>
-                            <input type="file" class="form-control" name="image" id="image" />
-                        </div>
-                        <div class="col-md-12">
-                            <img id ="showImage"src="{{ url('upload/no_image.jpg')}}" alt="Admin" class="p-1 rounded-circle bg-primary" width="80">
+                            <label for="input1" class="form-label">SubCategory Name</label>
+                            <input type="text" name="subcategory_name" class="form-control" id="input1" placeholder="SubCategory Name">
                         </div>
 
 
