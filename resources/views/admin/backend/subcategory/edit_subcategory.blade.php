@@ -39,14 +39,14 @@
                     <form id="myForm" method="post" action="{{route('update.category')}}" class="row g-3" enctype="multipart/form-data">
                         @csrf
 
-                        <input type="hidden" name="id" value="{{$category->id}}">
+                        <input type="hidden" name="id" value="{{$dataSubCategory->id}}">
                         <div class="form-group col-md-12">
                             <label for="input1" class="form-label">Category Name</label>
-                            <select class="mb-3 form-select" aria-label="Default select example">
+                            <select name="category_id" class="mb-3 form-select" aria-label="Default select example">
                                 <option selected="" disabled>Category Name</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                @foreach($category as $item)
+                                <option value="{{$item->id}}" {{$item->id == $dataSubCategory->category_id ? 'selected' : ''}} >{{$item->category_name}}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="form-group col-md-12">

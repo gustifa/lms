@@ -122,13 +122,6 @@ class CategoryController extends Controller
         return view('admin.backend.subcategory.add_subcategory', compact('dataCategory'));
     }
 
-    public function EditSubCategory($id){
-        $category = Category::find($id);
-        $dataSubCategory = SubCategory::find($id);
-        // dd($dataSubCategory);
-        return view('admin.backend.subcategory.edit_subcategory', compact('category','dataSubCategory'));
-
-    }
 
 
     public function StoreSubCategory(Request $request){
@@ -148,6 +141,14 @@ class CategoryController extends Controller
 
         return redirect()->route('all.subcategory')->with($notification);
     }
+
+    public function EditSubCategory($id){
+        $category = Category::latest()->get($id);
+        $dataSubCategory = SubCategory::find($id);
+        return view('admin.backend.subcategory.edit_subcategory', compact('category','dataSubCategory'));
+
+    }
+
 
 
 }
