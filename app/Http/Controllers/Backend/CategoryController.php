@@ -131,4 +131,23 @@ class CategoryController extends Controller
     }
 
 
+    public function StoreSubCategory(Request $request){
+        SubCategory::insert([
+            'category_id' => $request->category_id,
+            'subcategory_name' => $request->subcategory_name,
+            'subcategory_slug' => strtolower(str_replace(' ', '-',$request->subcategory_name)),
+        ]);
+
+
+        $notification = array(
+            'message' => 'SubCategory Update Successfully',
+            'alert-type' => 'success',
+
+        );
+
+
+        return redirect()->route('all.subcategory')->with($notification);
+    }
+
+
 }

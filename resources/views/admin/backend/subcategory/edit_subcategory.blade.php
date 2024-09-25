@@ -42,7 +42,12 @@
                         <input type="hidden" name="id" value="{{$category->id}}">
                         <div class="form-group col-md-12">
                             <label for="input1" class="form-label">Category Name</label>
-                            <input type="text" name="category_name" class="form-control" id="input1" value="{{$category->category_name}}">
+                            <select class="mb-3 form-select" aria-label="Default select example">
+                                <option selected="" disabled>Category Name</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
                         </div>
                         <div class="form-group col-md-12">
                             <label for="input1" class="form-label">Sub Category Name</label>

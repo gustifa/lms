@@ -40,7 +40,12 @@
                         @csrf
                         <div class="form-group col-md-12">
                             <label for="input1" class="form-label">Category Name</label>
-                            <input type="text" name="category_name" class="form-control" id="input1" placeholder="Category Name">
+                            <select name="category_id" class="mb-3 form-select" aria-label="Default select example">
+                                <option selected="" disabled>Category Name</option>
+                                @foreach($dataCategory as $item)
+                                <option value="{{$item->id}}">{{$item->category_name}}</option>
+                                @endforeach
+                            </select>
                         </div>
                         <div class="form-group col-md-12">
                             <label for="input1" class="form-label">SubCategory Name</label>
@@ -66,22 +71,22 @@
     $(document).ready(function (){
         $('#myForm').validate({
             rules: {
-                category_name: {
-                    required : true,
-                },
+                // category_id: {
+                //     required : true,
+                // },
 
-                image: {
+                subcategory_name: {
                     required : true,
                 },
 
             },
             messages :{
-                category_name: {
-                    required : 'Please Enter category_name',
-                },
+                // category_id: {
+                //     required : 'Please Enter category_name',
+                // },
 
-                image: {
-                    required : 'Please Upload Image',
+                subcategory_name: {
+                    required : 'Please Enter subcategory_name',
                 },
 
 
