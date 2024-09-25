@@ -45,7 +45,7 @@
                             <select name="category_id" class="mb-3 form-select" aria-label="Default select example">
                                 <option selected="" disabled>Category Name</option>
                                 @foreach($category as $item)
-                                <option value="{{$item->id}}" {{$item->id == $dataSubCategory->category_id ? 'selected' : ''}} >{{$item->category_name}}</option>
+                                <option value="{{$item->id}}" {{$item->id == $dataSubCategory->category_id ? 'selected' : ''}}>{{$item->category_name}}</option>
                                 @endforeach
                             </select>
                         </div>
