@@ -36,7 +36,7 @@
             <div class="card">
                 <div class="p-4 card-body">
                     {{-- <h5 class="mb-4">Vertical Form</h5> --}}
-                    <form id="myForm" method="post" action="{{route('update.category')}}" class="row g-3" enctype="multipart/form-data">
+                    <form id="myForm" method="post" action="{{route('update.subcategory')}}" class="row g-3" enctype="multipart/form-data">
                         @csrf
 
                         <input type="hidden" name="id" value="{{$dataSubCategory->id}}">

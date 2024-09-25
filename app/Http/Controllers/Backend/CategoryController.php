@@ -105,8 +105,16 @@ class CategoryController extends Controller
 
     }
 
-    public function DeleteCategory($id){
 
+    public function DeleteCategory($id){
+        $category = Category::find($id);
+        $category->delete();
+        $notification = array(
+            'message' => 'Category Berhasil dihapus',
+            'alert-type' => 'info'
+        );
+
+        return redirect()->route('all.category')->with($notification);
 
     }
 
@@ -146,6 +154,26 @@ class CategoryController extends Controller
         $category = Category::latest()->get();
         $dataSubCategory = SubCategory::find($id);
         return view('admin.backend.subcategory.edit_subcategory', compact('category','dataSubCategory'));
+
+    }
+
+    public function UpdateSubCategory(Request $request){
+        $subcat_id = $request->id;
+        SubCategory::find($subcat_id)->update([
+            'category_id' => $request->category_id,
+            'subcategory_name' => $request->subcategory_name,
+            'subcategory_slug' => strtolower(str_replace(' ', '-',$request->subcategory_name)),
+        ]);
+
+
+        $notification = array(
+            'message' => 'SubCategory Update Successfully',
+            'alert-type' => 'success',
+
+        );
+
+
+        return redirect()->route('all.subcategory')->with($notification);
 
     }
 

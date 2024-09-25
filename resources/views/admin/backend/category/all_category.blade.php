@@ -42,10 +42,10 @@
                             <td>{{$item->category_name}}</td>
                             <td>
                                 <a href="{{route('edit.category',$item->id)}}" class="px-5 btn btn-primary">Edit</a>
-                                <a href="" class="px-5 btn btn-danger">Delete</a>
+                                <a href="{{route('delete.category',$item->id)}}" id="delete" class="px-5 btn btn-danger">Delete</a>
                             </td>
 
-                        </tr>
+                        </tr>v
                         @endforeach
 
                     </tbody>
