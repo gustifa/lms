@@ -177,6 +177,18 @@ class CategoryController extends Controller
 
     }
 
+    public function DeleteSubCategory($id){
+        $category = SubCategory::find($id);
+        $category->delete();
+        $notification = array(
+            'message' => 'SubCategory Berhasil dihapus',
+            'alert-type' => 'info'
+        );
+
+        return redirect()->route('all.subcategory')->with($notification);
+
+    }
+
 
 
 }
