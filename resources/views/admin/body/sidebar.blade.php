@@ -59,30 +59,7 @@
                 </li>
                 <li> <a href="component-cards.html"><i class='bx bx-radio-circle'></i>Cards</a>
                 </li>
-                <li> <a href="component-carousels.html"><i class='bx bx-radio-circle'></i>Carousels</a>
-                </li>
-                <li> <a href="component-list-groups.html"><i class='bx bx-radio-circle'></i>List Groups</a>
-                </li>
-                <li> <a href="component-media-object.html"><i class='bx bx-radio-circle'></i>Media Objects</a>
-                </li>
-                <li> <a href="component-modals.html"><i class='bx bx-radio-circle'></i>Modals</a>
-                </li>
-                <li> <a href="component-navs-tabs.html"><i class='bx bx-radio-circle'></i>Navs & Tabs</a>
-                </li>
-                <li> <a href="component-navbar.html"><i class='bx bx-radio-circle'></i>Navbar</a>
-                </li>
-                <li> <a href="component-paginations.html"><i class='bx bx-radio-circle'></i>Pagination</a>
-                </li>
-                <li> <a href="component-popovers-tooltips.html"><i class='bx bx-radio-circle'></i>Popovers & Tooltips</a>
-                </li>
-                <li> <a href="component-progress-bars.html"><i class='bx bx-radio-circle'></i>Progress</a>
-                </li>
-                <li> <a href="component-spinners.html"><i class='bx bx-radio-circle'></i>Spinners</a>
-                </li>
-                <li> <a href="component-notifications.html"><i class='bx bx-radio-circle'></i>Notifications</a>
-                </li>
-                <li> <a href="component-avtars-chips.html"><i class='bx bx-radio-circle'></i>Avatrs & Chips</a>
-                </li>
+
             </ul>
         </li>
         <li>
@@ -115,14 +92,14 @@
                 </li>
             </ul>
         </li>
-        <li>
+        {{-- <li>
             <a href="form-froala-editor.html">
                 <div class="parent-icon"><i class='bx bx-code-alt'></i>
                 </div>
                 <div class="menu-title">Froala Editor</div>
             </a>
-        </li>
-        <li class="menu-label">Forms & Tables</li>
+        </li> --}}
+        {{-- <li class="menu-label">Forms & Tables</li>
         <li>
             <a class="has-arrow" href="javascript:;">
                 <div class="parent-icon"><i class='bx bx-message-square-edit'></i>
@@ -301,14 +278,14 @@
                 </div>
                 <div class="menu-title">Documentation</div>
             </a>
-        </li>
-        <li>
+        </li> --}}
+        {{-- <li>
             <a href="https://themeforest.net/user/codervent" target="_blank">
                 <div class="parent-icon"><i class="bx bx-support"></i>
                 </div>
                 <div class="menu-title">Support</div>
             </a>
-        </li>
+        </li> --}}
     </ul>
     <!--end navigation-->
 </div>
