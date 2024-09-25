@@ -27,10 +27,10 @@
                 <table id="example" class="table table-striped table-bordered" style="width:100%">
                     <thead>
                         <tr>
-                            <th>No</th>
+                            <th style="width: 8px;">No</th>
                             <th>Category Name</th>
                             <th>Category Name</th>
-                            <th>Action</th>
+                            <th style="width: 20px;">Action</th>
 
                         </tr>
                     </thead>
