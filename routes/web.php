@@ -59,6 +59,9 @@ Route::middleware(['auth','role:admin'])->group(function(){
 
 Route::middleware(['auth','role:guru'])->group(function(){
     Route::get('/guru/dashboard', [GuruController::class, 'index'])->name('guru.dashboard');
+    Route::get('/guru/logout', [GuruController::class, 'guruLogout'])->name('guru.logout');
+    Route::get('/guru/profile', [GuruController::class, 'guruProfile'])->name('guru.profile');
+    Route::post('/guru/profile/store', [GuruController::class, 'guruProfileStore'])->name('guru.profile.store');
 });
 
 
