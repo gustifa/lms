@@ -80,7 +80,7 @@ class AdminController extends Controller
             );
             return back()->with($notification);
         }
-        User::whereId(auth()->user->id)->update([
+        User::whereId(auth::user()->id)->update([
             'password' => Hash::make($request->new_password)
 
         ]);
