@@ -62,6 +62,8 @@ Route::middleware(['auth','role:guru'])->group(function(){
     Route::get('/guru/logout', [GuruController::class, 'guruLogout'])->name('guru.logout');
     Route::get('/guru/profile', [GuruController::class, 'guruProfile'])->name('guru.profile');
     Route::post('/guru/profile/store', [GuruController::class, 'guruProfileStore'])->name('guru.profile.store');
+    Route::get('/guru/change/password', [GuruController::class, 'guruChangePassword'])->name('guru.change.password');
+    Route::post('/guru/update/password', [GuruController::class, 'guruUpdatePassword'])->name('guru.update.password');
 });
 
 
