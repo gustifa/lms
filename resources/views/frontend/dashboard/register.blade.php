@@ -1,6 +1,5 @@
 @extends('frontend.master')
 @section('home')
-
 <!-- ================================
     START BREADCRUMB AREA
 ================================= -->
@@ -9,12 +8,12 @@
     <div class="container">
         <div class="breadcrumb-content d-flex flex-wrap align-items-center justify-content-between">
             <div class="section-heading">
-                <h2 class="section__title text-white">Login</h2>
+                <h2 class="section__title text-white">Sign Up</h2>
             </div>
             <ul class="generic-list-item generic-list-item-white generic-list-item-arrow d-flex flex-wrap align-items-center">
                 <li><a href="index.html">Home</a></li>
                 <li>Pages</li>
-                <li>Login</li>
+                <li>Sign Up</li>
             </ul>
         </div><!-- end breadcrumb-content -->
     </div><!-- end container -->
@@ -22,6 +21,7 @@
 <!-- ================================
     END BREADCRUMB AREA
 ================================= -->
+
 <!-- ================================
        START CONTACT AREA
 ================================= -->
@@ -38,10 +38,9 @@
             <div class="col-lg-7 mx-auto">
                 <div class="card card-item">
                     <div class="card-body">
-                        <h3 class="card-title text-center fs-24 lh-35 pb-4">Login to Your Account!</h3>
+                        <h3 class="card-title text-center fs-24 lh-35 pb-4">Create an Account and <br> Start Learning!</h3>
                         <div class="section-block"></div>
-                        <form method="POST" class="pt-4"> action="{{ route('login') }}">
-                            @csrf
+                        <form method="post" class="pt-4">
                             <div class="d-flex flex-wrap align-items-center pb-4">
                                 <button class="btn theme-btn flex-grow-1 mx-2 mb-2"><i class="la la-google mr-2"></i>Google</button>
                                 <button class="btn theme-btn flex-grow-1 mx-2 mb-2"><i class="la la-facebook mr-2"></i>Facebook</button>
@@ -51,17 +50,38 @@
                                 <div class="icon-element icon-element-md fs-25 shadow-sm">Or</div>
                             </div>
                             <div class="input-box">
-                                <label class="label-text">Email or Username</label>
+                                <label class="label-text">First Name</label>
                                 <div class="form-group">
-                                    <input class="form-control form--control" type="email" name="email" id="email" placeholder="Email or Username">
+                                    <input class="form-control form--control" type="text" name="name" placeholder="First name">
                                     <span class="la la-user input-icon"></span>
+                                </div>
+                            </div><!-- end input-box -->
+                            <div class="input-box">
+                                <label class="label-text">Last Name</label>
+                                <div class="form-group">
+                                    <input class="form-control form--control" type="text" name="name" placeholder="Last name">
+                                    <span class="la la-user input-icon"></span>
+                                </div>
+                            </div><!-- end input-box -->
+                            <div class="input-box">
+                                <label class="label-text">Username</label>
+                                <div class="form-group">
+                                    <input class="form-control form--control" type="text" name="name" placeholder="Username">
+                                    <span class="la la-user input-icon"></span>
+                                </div>
+                            </div><!-- end input-box -->
+                            <div class="input-box">
+                                <label class="label-text">Email Address</label>
+                                <div class="form-group">
+                                    <input class="form-control form--control" type="email" name="email" placeholder="Enter email address">
+                                    <span class="la la-envelope input-icon"></span>
                                 </div>
                             </div><!-- end input-box -->
                             <div class="input-box">
                                 <label class="label-text">Password</label>
                                 <div class="input-group mb-3">
                                     <span class="la la-lock input-icon"></span>
-                                    <input class="form-control form--control password-field" type="password" name="password" id="password" placeholder="Password">
+                                    <input class="form-control form--control password-field" type="password" name="password" placeholder="Password">
                                     <div class="input-group-append">
                                         <button class="btn theme-btn theme-btn-transparent toggle-password" type="button">
                                             <svg class="eye-on" xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 0 24 24" width="22px" fill="#7f8897"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 6c3.79 0 7.17 2.13 8.82 5.5C19.17 14.87 15.79 17 12 17s-7.17-2.13-8.82-5.5C4.83 8.13 8.21 6 12 6m0-2C7 4 2.73 7.11 1 11.5 2.73 15.89 7 19 12 19s9.27-3.11 11-7.5C21.27 7.11 17 4 12 4zm0 5c1.38 0 2.5 1.12 2.5 2.5S13.38 14 12 14s-2.5-1.12-2.5-2.5S10.62 9 12 9m0-2c-2.48 0-4.5 2.02-4.5 4.5S9.52 16 12 16s4.5-2.02 4.5-4.5S14.48 7 12 7z"/></svg>
@@ -71,15 +91,19 @@
                                 </div>
                             </div><!-- end input-box -->
                             <div class="btn-box">
-                                <div class="d-flex align-items-center justify-content-between pb-4">
-                                    <div class="custom-control custom-checkbox fs-15">
-                                        <input type="checkbox" class="custom-control-input" id="rememberMeCheckbox" required>
-                                        <label class="custom-control-label custom--control-label" for="rememberMeCheckbox">Remember Me</label>
-                                    </div><!-- end custom-control -->
-                                    <a href="recover.html" class="btn-text">Forgot my password?</a>
-                                </div>
-                                <button class="btn theme-btn" type="submit">Login Account <i class="la la-arrow-right icon ml-1"></i></button>
-                                <p class="fs-14 pt-2">Don't have an account? <a href="sign-up.html" class="text-color hover-underline">Register</a></p>
+                                <div class="custom-control custom-checkbox mb-2 fs-15">
+                                    <input type="checkbox" class="custom-control-input" id="receiveCheckbox" required>
+                                    <label class="custom-control-label custom--control-label lh-20" for="receiveCheckbox">Yes! I want to get the most out of Aduca by receiving emails with exclusive deals, personal recommendations and learning tips!</label>
+                                </div><!-- end custom-control -->
+                                <div class="custom-control custom-checkbox mb-4 fs-15">
+                                    <input type="checkbox" class="custom-control-input" id="agreeCheckbox" required>
+                                    <label class="custom-control-label custom--control-label" for="agreeCheckbox">by signing i agree to the
+                                        <a href="terms-and-conditions.html" class="text-color hover-underline">terms and conditions</a> and
+                                        <a href="privacy-policy.html" class="text-color hover-underline">privacy policy</a>
+                                    </label>
+                                </div><!-- end custom-control -->
+                                <button class="btn theme-btn" type="submit">Register Account <i class="la la-arrow-right icon ml-1"></i></button>
+                                <p class="fs-14 pt-2">Already have an account? <a href="login.html" class="text-color hover-underline">Log in</a></p>
                             </div><!-- end btn-box -->
                         </form>
                     </div><!-- end card-body -->

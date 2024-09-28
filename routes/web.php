@@ -15,7 +15,7 @@ use App\Http\Controllers\Backend\CategoryController;
 Route::get('/', [UserController::class, 'index'])->name('frontend.index');
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('frontend.dashboard.index');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
