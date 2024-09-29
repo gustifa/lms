@@ -5,7 +5,6 @@
 $id = Auth::user()->id;
 $profileData = App\Models\User::find($id);
 @endphp
-<div class="container-fluid">
     <div class="breadcrumb-content d-flex flex-wrap align-items-center justify-content-between mb-5">
         <div class="media media-card align-items-center">
             <div class="media-img media--img media-img-md rounded-full">

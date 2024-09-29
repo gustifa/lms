@@ -20,6 +20,8 @@ Route::get('/dashboard', function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/user/profile', [UserController::class, 'userProfile'])->name('user.profile');
+    Route::get('/user/logout', [UserController::class, 'userLogout'])->name('user.logout');
+    Route::post('/user/profile/update', [UserController::class, 'userProfileUpdate'])->name('user.profile.update');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
