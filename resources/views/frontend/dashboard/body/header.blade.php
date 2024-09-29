@@ -290,7 +290,7 @@
                                                                 </a>
                                                             </li>
                                                             <li>
-                                                                <a href="dashboard-settings.html">
+                                                                <a href="{{route('user.profile')}}">
                                                                     <i class="la la-edit mr-1"></i> Edit profile
                                                                 </a>
                                                             </li>
