@@ -32,10 +32,17 @@
                                 </svg>
                             </button>
                         </div>
+                        @auth
+                        <ul class="flex-wrap pl-3 ml-3 generic-list-item d-flex align-items-center fs-14 border-left border-left-gray">
+                            <li class="pr-3 mr-3 d-flex align-items-center border-right border-right-gray"><i class="mr-1 la la-sign-in"></i><a href="{{route('login')}}"> Dashboard</a></li>
+                            <li class="d-flex align-items-center"><i class="mr-1 la la-user"></i><a href="{{route('user.logout')}}"> Logout</a></li>
+                        </ul>
+                        @else
                         <ul class="flex-wrap pl-3 ml-3 generic-list-item d-flex align-items-center fs-14 border-left border-left-gray">
                             <li class="pr-3 mr-3 d-flex align-items-center border-right border-right-gray"><i class="mr-1 la la-sign-in"></i><a href="{{route('login')}}"> Login</a></li>
-                            <li class="d-flex align-items-center"><i class="mr-1 la la-user"></i><a href="sign-up.html"> Register</a></li>
+                            <li class="d-flex align-items-center"><i class="mr-1 la la-user"></i><a href="{{route('register')}}"> Register</a></li>
                         </ul>
+                        @endauth
                     </div><!-- end header-widget -->
                 </div><!-- end col-lg-6 -->
             </div><!-- end row -->
