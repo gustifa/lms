@@ -66,10 +66,10 @@
             <a class="has-arrow" href="javascript:;">
                 <div class="parent-icon"><i class="bx bx-repeat"></i>
                 </div>
-                <div class="menu-title">Content</div>
+                <div class="menu-title">Guru</div>
             </a>
             <ul>
-                <li> <a href="content-grid-system.html"><i class='bx bx-radio-circle'></i>Grid System</a>
+                <li> <a href="{{route('all.guru')}}"><i class='bx bx-radio-circle'></i>All Guru</a>
                 </li>
                 <li> <a href="content-typography.html"><i class='bx bx-radio-circle'></i>Typography</a>
                 </li>

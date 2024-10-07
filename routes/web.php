@@ -7,6 +7,8 @@ use App\Http\Controllers\GuruController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Backend\CategoryController;
+use App\Http\Controllers\Backend\CourseController;
+
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -38,6 +40,10 @@ Route::middleware(['auth','role:admin'])->group(function(){
     Route::post('/admin/profile/store', [AdminController::class, 'adminProfileStore'])->name('admin.profile.store');
     Route::get('/admin/change/password', [AdminController::class, 'adminChangePassword'])->name('admin.change.password');
     Route::post('/admin/update/password', [AdminController::class, 'adminUpdatePassword'])->name('admin.update.password');
+
+
+    //Route Guru
+    Route::get('/all/guru', [AdminController::class, 'AllGuru'])->name('all.guru');
 
     //Category All Route
     Route::controller(CategoryController::class)->group(function(){

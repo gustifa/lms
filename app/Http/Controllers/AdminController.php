@@ -95,4 +95,11 @@ class AdminController extends Controller
     }
 
 
+    public function AllGuru(){
+        $allGuru = User::where('role', 'guru')->latest()->get();
+        return view('admin.backend.guru.all_guru', compact('allGuru'));
+
+    }
+
+
 }
