@@ -45,6 +45,7 @@ Route::middleware(['auth','role:admin'])->group(function(){
     //Route Guru
     Route::get('/all/guru', [AdminController::class, 'AllGuru'])->name('all.guru');
 
+    
     //Category All Route
     Route::controller(CategoryController::class)->group(function(){
         Route::get('all/category', 'AllCategory')->name('all.category');
@@ -74,7 +75,13 @@ Route::middleware(['auth','role:guru'])->group(function(){
     Route::post('/guru/profile/store', [GuruController::class, 'guruProfileStore'])->name('guru.profile.store');
     Route::get('/guru/change/password', [GuruController::class, 'guruChangePassword'])->name('guru.change.password');
     Route::post('/guru/update/password', [GuruController::class, 'guruUpdatePassword'])->name('guru.update.password');
+
+    //Route Guru
+    Route::get('/all/course', [CourseController::class, 'AllCourse'])->name('all.course');
+
 });
+
+
 
 
 
